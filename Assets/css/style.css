@@ -1,3 +1,27 @@
+* {
+    font-family: sans-serif;
+}
+
+#timer {
+    text-align: right;
+    margin: auto 30px;
+    font: 500;
+}
+
+.intro-section {
+    text-align: center;
+}
+
+#begin {
+    color: black;
+    background-color: lightseagreen;
+}
+
+.options {
+    color: darkviolet;
+    /* display: inline-block; */
+}
+
 .hide {
     display: none;
 }

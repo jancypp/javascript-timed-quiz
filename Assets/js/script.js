@@ -40,7 +40,7 @@ var optionFour = document.querySelector("#option4"); //row 33 HTML
 var initialSection = document.querySelector(".initial-section"); //row 36 HTML
 var resultSection = document.querySelector(".highscore"); // row 43 HTML
 var timerSection = document.querySelector("#timer"); // row 16 HTML
-var timerCount = 60;
+var timerCount = 30;
 var index = 0;
 var timerInterval;
 
@@ -57,6 +57,8 @@ function startQuiz() {
     startTime();
   }
 
+//  * I will be presented with the first question
+//  * I will be presented with the options answers
   function runQuestion() {
   questionHeading.textContent = questions[index].question;
   optionOne.textContent = questions[index].options[0];
@@ -64,6 +66,20 @@ function startQuiz() {
   optionThree.textContent = questions[index].options[2];
   optionFour.textContent = questions[index].options[3];
   }
+
+// options.addEventListener("click", function(event)){
+//   var selection = event.target.textContent;
+//   console.log(selection);
+//   console.log(questions[index].answer);
+//   if (options == questions[index].answer) {
+//     console.log("correct");
+//     else (
+//       time = time -10
+//       console.log("wrong");
+//     )
+//     showNext()
+//   }
+// }
 
 //  * I will be given a specified amount of time to answer all the questions in the quiz
 function startTime() {
@@ -85,8 +101,7 @@ function startTime() {
   function sendMessage (){
     timerSection.textContent = "Time is up...end of game!"
   }
-//  * I will be presented with the first question
-//  * I will be presented with the options answers
+
 //  * When I answer correctly ther quiz should move to the next question
 //  * When I answer a question incorrectly 10 seconds should be deducted from the timer
 //  * I'm alerted if I answered the question correctly or incorrectly
