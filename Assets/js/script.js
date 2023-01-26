@@ -45,6 +45,8 @@ var timerSection = document.querySelector("#timer"); // row 16 HTML
 var timerCount = 30;
 var index = 0;
 var timerInterval;
+var submitButton = document.getElementById("submit-button");
+const finalScore = document.querySelector("#final-score");
 
 //Pseudocode
 //  * Prompted to start the quiz by clicking a button - event listener
@@ -70,6 +72,8 @@ function runQuestion() {
   optionFour.textContent = questions[index].options[3];
 }
 
+//  * When I answer correctly ther quiz should move to the next question
+//  * When I answer a question incorrectly 10 seconds should be deducted from the timer
 //event listener for the button click on the answers and function to run through each question
 options.addEventListener("click", function (event) {
   if (!event.target.matches("button")) {
@@ -107,6 +111,9 @@ function startTime() {
   }, 1000);
 }
 function endGame() {
+  questionSection.classList.add("hide");
+  initialSection.classList.remove("hide");
+  resultSection.classList.remove("hide");
   sendMessage();
   score = timerCount;
   clearInterval(timerInterval);
@@ -116,11 +123,14 @@ function sendMessage() {
   timerSection.textContent = "End of game!"
 }
 
-//  * When I answer correctly ther quiz should move to the next question
-//  * When I answer a question incorrectly 10 seconds should be deducted from the timer
+//  * I will be prompted to input my initials when the game is over
+submitButton.addEventListener("click", function() {
+  const initials = document.querySelector("#initial-input").value; 
+  console.log(initials);
+  finalScore.textContent = `Initials: ${initials} Score: ${score}`; 
+})
 //  * I'm alerted if I answered the question correctly or incorrectly
 //  * I want my score tallied and displayed after all the questions were answered
-//  * I will be prompted to input my initials when the game is over
 //  * I'll be prompted to clear my score or play again
 
 
