@@ -26,17 +26,17 @@ WHEN the game is over
 THEN I can save my initials and my score
 
 # Mock-up
-![alt="prompt for how many characters to include"](./Assets/Prompt%20for%20how%20many%20characters%20to%20include.png)
+![alt="First page to start the quize"](./Assets/01-First%20page%20to%20start%20quiz.png)
 
-![alt="confirm if lowercase letters should be include"](./Assets/confirm%20for%20lowercase.png)
+![alt="First quiz question"](./Assets/02-%20FIrst%20Quiz%20Question.png)
 
-![alt="confirm if uppercase letters should be included"](./Assets/Confirm%20uppercase.png)
+![alt="Second quiz question"](./Assets/03-Second%20Question.png)
 
-![alt="confirm if numbers should be included"](./Assets/Confirm%20numbers.png)
+![alt="Third quiz question"](./Assets/04-Third%20Question.png)
 
-![alt="confirm if special characters should be included"](./Assets/Confirm%20for%20special%20characters.png)
+![alt="End of game screen"](./Assets/05-End%20of%20Game.png)
 
-![alt="final output of unique password generated"](./Assets/Final%20Output%20-%20unique%20password%20generated.png)
+![alt="Initial input and highscore tally"](./Assets/06-Initials%20and%20Highscore.png)
 
 ## Link to site
 https://jancypp.github.io/javascript-timed-quiz/
